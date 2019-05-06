@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./bin/www",
     "build": "node node_modules/.bin/webpack --config webpack.config.prod.js",
-    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "5.2.0",
@@ -51,6 +53,8 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3",
     "sendgrid": "5.2.3",
-    "serve-favicon": "~2.4.5"
-  }
+    "serve-favicon": "~2.4.5",
+    "snyk": "^1.161.1"
+  },
+  "snyk": true
 }
